@@ -1,6 +1,5 @@
-import 'package:bookreco/bloc/cubit.dart';
-import 'package:bookreco/bloc/states.dart';
 import 'package:bookreco/component/components.dart';
+import 'package:bookreco/data/cubit/app_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
