@@ -149,14 +149,14 @@ class _signUpState extends State<signUp> {
                           await SignUpMethod();
                           GoTohomePage(context, email!);
                         } on FirebaseAuthException catch (ex) {
-                          if (ex.code == 'user-not-found') {
-                            showSnackBar(context, 'user not found');
-                          } else if (ex.code == 'wrong-password') {
+                          if (ex.code == 'weak-password') {
+                            showSnackBar(context, 'weak password');
+                          } else if (ex.code == 'email-already-in-use') {
                             showSnackBar(context, 'wrong password');
                           }
                         } catch (ex) {
                           print(ex);
-                          showSnackBar(context, 'there was an error');
+                          showSnackBar(context, 'email already exists');
                         }
                         Future.delayed(
                           const Duration(seconds: 1),
